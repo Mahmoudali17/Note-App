@@ -27,7 +27,7 @@ class HomeView extends StatelessWidget{
        padding: const EdgeInsets.all(16),
        child: Column(                                                           // Column is a flex widget
          children: [
-           CustomAppBar(),
+           const CustomAppBar(title: "Notes",icon: Icons.search,),
            Expanded(child: NoteItemBuilder()),
          ],
        ),
