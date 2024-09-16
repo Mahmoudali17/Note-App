@@ -6,6 +6,7 @@ class NoteItemBuilder extends StatelessWidget{
   Widget build(BuildContext context) {
     return
       ListView.builder(
+          //padding: EdgeInsets.zero,
           itemBuilder: (context , index) => NoteItem()
       )
     ;
