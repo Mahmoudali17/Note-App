@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:note_app_test/Cubits/Cubit/add_note_cubit.dart';
+import 'package:note_app_test/Cubits/Add_Note_Cubit/add_note_cubit.dart';
 import 'package:note_app_test/Models/Note-Model.dart';
 import 'Custom_BottomSheet_Button.dart';
 import 'Custom_Text_Field.dart';
