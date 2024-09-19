@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:note_app_test/Models/Note-Model.dart';
 import 'package:note_app_test/Views/Edit-Note-View.dart';
 
 class NoteItem extends StatelessWidget{
+  const NoteItem({super.key,required this.noteModel});
+  final NoteModel noteModel;
   @override
   Widget build(BuildContext context) {
     return
@@ -14,20 +17,21 @@ class NoteItem extends StatelessWidget{
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.yellow ,
+              color: Color(noteModel.color) ,
               borderRadius: BorderRadius.circular(16),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 ListTile(
-                  title: const Text("FLutter Tips",style: TextStyle(color: Colors.black),),
-                  subtitle:  Text("Enhance and give more , Expect less",style: TextStyle(color: Colors.black.withOpacity(0.4),fontSize: 20,),),
+                  title: Text(noteModel.title,style: const TextStyle(color: Colors.black),),
+                  subtitle:  Text(noteModel.subTitle
+                    ,style: TextStyle(color: Colors.black.withOpacity(0.4),fontSize: 20,),),
                   trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.delete,color: Colors.black,)),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 16),
-                  child: Text("May 21,2022",style: TextStyle(color: Colors.black.withOpacity(0.4)),),
+                  child: Text(noteModel.date,style: TextStyle(color: Colors.black.withOpacity(0.4)),),
                 ),
               ],
             ),
