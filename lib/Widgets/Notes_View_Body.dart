@@ -27,7 +27,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
       padding: const EdgeInsets.all(16),
       child: Column(                                                           // Column is a flex widget
         children: [
-          const CustomAppBar(title: "Notes",icon: Icons.search,),
+          CustomAppBar(title: "Notes",icon: Icons.search,),
           Expanded(child: NoteItemBuilder()),
         ],
       ),

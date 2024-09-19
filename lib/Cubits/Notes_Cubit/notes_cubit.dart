@@ -14,5 +14,6 @@ class NotesCubit extends Cubit<NotesState> {
   fetchAllNotes()async{
       var notesBox = Hive.box<NoteModel>(KNotesBox);
        notes = notesBox.values.toList();
+      emit(NotesSuccess(notes!)); // I emit NoteSuccess To be able for Rebuild UI
   }
 }

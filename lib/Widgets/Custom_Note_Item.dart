@@ -13,7 +13,7 @@ class NoteItem extends StatelessWidget{
     return
       GestureDetector(
         onTap: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context){return EditNoteView();}));
+          Navigator.push(context, MaterialPageRoute(builder: (context){return EditNoteView(noteModel: noteModel,);}));
         },
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 8),
