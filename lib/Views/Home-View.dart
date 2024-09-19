@@ -11,26 +11,23 @@ import '../Widgets/Notes_View_Body.dart';
 class HomeView extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-   return BlocProvider(
-     create: (context) => NotesCubit(),
-     child: Scaffold(
-       floatingActionButton: FloatingActionButton(onPressed: (){
-         showModalBottomSheet(
-           isScrollControlled: true,
-           context: context,
-           builder: (context){
-              return const AddNoteBottomSheet();
-           },
-           shape: RoundedRectangleBorder(
-             borderRadius: BorderRadius.circular(16) ,
-         ) ,
-         );
-       } ,
-         child: const Icon(Icons.add),
-       ),
-      body:
-       NotesViewBody(),
+   return Scaffold(
+     floatingActionButton: FloatingActionButton(onPressed: (){
+       showModalBottomSheet(
+         isScrollControlled: true,
+         context: context,
+         builder: (context){
+            return const AddNoteBottomSheet();
+         },
+         shape: RoundedRectangleBorder(
+           borderRadius: BorderRadius.circular(16) ,
+       ) ,
+       );
+     } ,
+       child: const Icon(Icons.add),
      ),
+    body:
+     NotesViewBody(),
    );
   }
 }
