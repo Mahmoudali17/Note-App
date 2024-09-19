@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:note_app_test/Cubits/Add_Note_Cubit/add_note_cubit.dart';
 import 'package:note_app_test/Models/Note-Model.dart';
+import 'Color_Item_Builder.dart';
 import 'Custom_BottomSheet_Button.dart';
 import 'Custom_Text_Field.dart';
 
@@ -29,6 +30,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             const SizedBox(height: 15,),
             CustomTextField(onsaved: (value){subTitle= value;},hintText: "Content",maxLines: 5,),
             const SizedBox(height: 50,),
+            ColorItemBuilder(),
             BlocBuilder<AddNoteCubit, AddNoteState>(
              builder: (context, state) {
              return CustomButton(
