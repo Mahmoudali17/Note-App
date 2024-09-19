@@ -27,7 +27,11 @@ class NoteItem extends StatelessWidget{
                   title: Text(noteModel.title,style: const TextStyle(color: Colors.black),),
                   subtitle:  Text(noteModel.subTitle
                     ,style: TextStyle(color: Colors.black.withOpacity(0.4),fontSize: 20,),),
-                  trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.delete,color: Colors.black,)),
+                  trailing: IconButton(
+                      onPressed: (){
+                        noteModel.delete();
+                      },
+                      icon: const Icon(Icons.delete,color: Colors.black,)),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 16),
